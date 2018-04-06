@@ -1,0 +1,38 @@
+.download {
+	background: @gradient;
+	padding: 115px 0;
+
+	@media screen and @large {
+		padding: 85px 0;
+	}
+
+	@media screen and @medium {
+		padding: 35px 0; 
+	}
+
+	&_container {
+		.container;
+		text-align: center;
+	}
+
+	&_headline {
+		margin-bottom: 80px;
+		font-family: @dosis;
+		font-weight: 400;
+		color: #fff;
+		font-size: 36px;
+
+		@media screen and @medium {
+			margin-bottom: 30px;
+		}
+	}
+
+	&_box {
+		display: flex;
+		justify-content: space-between;
+
+		@media screen and (max-width: 1150px) {
+			flex-wrap: wrap;
+		}
+	}
+}

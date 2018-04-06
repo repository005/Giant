@@ -1,0 +1,184 @@
+.header {
+	background: @gradient;
+	padding-bottom: 215px;
+	height: 100vh;
+	min-height: 600px;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+
+	@media screen and @medium {
+		height: auto;
+		min-height: 400px;
+		padding-bottom: 115px;
+	}
+
+	@media screen and @small {
+		height: auto;
+		min-height: 400px;
+		padding-bottom: 55px;
+	}
+
+
+	&_phones {
+		position: absolute;
+		right: 0px;
+		top: 140px;
+		bottom: 0;
+		margin: auto;
+		z-index: 0;
+		width: 55.5%;
+
+		@media screen and @medium {
+			display: none;
+		}
+	}
+
+	&_container {
+		.container;
+		position: relative;
+		z-index: 1;
+	}
+
+	&_top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 145px;
+		padding-top: 30px;
+
+		@media screen and @medium {
+			margin-bottom: 75px;
+		}
+
+		@media screen and @small {
+			margin-bottom: 45px;
+			padding-top: 20px;
+		}
+	}
+
+	&_logoblock {
+		display: block;
+		text-decoration: none;
+		min-width: 180px;
+	}
+
+	&_logoname {
+		font-size: 36px;
+		line-height: 36px;
+		font-family: @dosis;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	&_nav {
+		font-size: 14px;
+		font-weight: 400;
+
+		@media screen and @medium {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	&_link {
+		margin-right: 30px;
+		margin-bottom: 10px;
+		text-decoration: none;
+		color: #fff;
+
+		&:hover {
+			color: black;
+		}
+
+		@media screen and @medium {
+			margin-right: 15px;
+		}
+	}
+
+	&_download {
+		.button;
+	}
+
+	&_promo {
+		width: 488px;
+		color: #fff;
+		font-size: 14px;
+		line-height: 24px;
+
+		@media screen and @large {
+			width: 400px;
+			margin-left: 5%;
+		}
+
+		@media screen and @medium {
+			width: 400px;
+			margin: auto;
+			text-align: center;
+		}
+
+		@media screen and @small {
+			width: 100%;
+		}
+
+	}
+
+	&_headline {
+		font-family: @dosis;
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 60px;
+		text-transform: capitalize;
+		margin-bottom: 15px;
+
+		@media screen and @large {
+			font-size: 44px;
+		}
+
+		@media screen and @medium {
+			text-align: center;
+		}
+
+		@media screen and @small {
+			font-size: 34px;
+			line-height: 42px;
+		}
+	}
+
+	&_text {
+		font-weight: 300;
+		margin-bottom: 20px;
+	}
+
+	&_privilege {
+		position: relative;
+		font-weight: 400;
+		line-height: 14px;
+		margin-bottom: 20px;
+
+		@media screen and @small {
+			margin-right: 0px;
+			line-height: 20px;
+		}
+
+		i {			
+			margin-right: 25px;
+
+			@media screen and @small {
+				margin-right: 10px;
+			}
+
+		}
+
+		&:last-of-type {
+			margin-bottom: 30px;
+		}
+	}
+
+	&_start-btn {
+		.button;
+		box-shadow: 0 0 0px 5px rgba(0,0,0, .1), 0 10px 30px 0 rgba(0,0,0, .1);
+	}
+}

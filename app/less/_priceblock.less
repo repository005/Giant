@@ -1,0 +1,183 @@
+.priceblock {
+	position: relative;
+	background: #f7fafc;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+	margin-right: 30px;
+	font-size: 14px;
+	text-transform: capitalize;
+	flex: 1 1 0;
+	cursor: default;
+
+	@media screen and @large {
+		margin-right: 0px;
+		border-right: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+
+	@media screen and @medium {
+		min-width: 40%;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 20px;
+
+		&:nth-of-type(2n) {
+			border-right: none;
+		}
+
+		&:last-of-type,
+		&:nth-last-of-type(2) {
+			border-bottom: none;
+		}
+	}
+
+	@media screen and @small {
+		min-width: 90%;
+		border: none;
+		border-bottom: 1px solid #ccc;
+	}
+
+	&:hover {
+		background: #fff;
+		box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .1);
+	}
+
+	@media screen and @medium {
+		background: #f7fafc;
+		box-shadow: none;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+		border-right: none;
+	}
+
+	&_headline {
+		font-family: @dosis;
+		font-size: 20px;
+		line-height: 50px;
+		font-weight: 400;
+		color: #333333;
+
+		@media screen and @medium {
+			line-height: 40px;
+		}
+	}
+
+	&_price {
+		position: relative;
+		background: #fff;
+		padding: 30px 0 13px;
+		font-family: @dosis;
+		font-size: 48px;
+		line-height: 48px;
+		font-weight: 600;
+		color: #333333;
+		margin-bottom: 70px;
+
+		&::after {
+			content: '';
+	    position: absolute;
+	    top: 99%;
+	    left: 0; 
+	    right: 0;
+	    padding-bottom: 40px;
+	    background: inherit;
+	    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+		}
+
+		sub, sup {
+			font-size: 18px;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline;
+		}
+
+		sup {
+			top: -1.25em;
+		}
+
+		sub {
+			bottom: 0;
+		}
+
+		@media screen and @medium {
+			color: #fff;
+			background: @gradient;
+			padding: 10px 0 0px;
+			margin-bottom: 25px;
+
+			&::after {
+		    padding-bottom: 20px;
+			}
+		}
+	}
+
+	&:hover {
+		.priceblock_price {
+			color: #fff;
+			background: @gradient;
+		}
+	}
+
+	&_condition-box {
+		color: #777777;
+		margin-bottom: 35px;
+		padding: 0 25px;
+		box-sizing: border-box;
+
+		@media screen and @medium { 
+			margin-bottom: 15px;
+			padding: 0;
+		}
+	}
+
+	&_condition {
+		color: #777777;
+		line-height: 34px;
+		border-bottom: 1px #eeeeee dashed;
+
+		&:last-of-type {
+			border: none;
+		}
+
+		@media screen and @medium { 
+			line-height: 28px;
+		}
+	}
+
+	&_trial {
+		display: block;
+		color: #aaaaaa;
+		margin-bottom: 10px;
+		text-decoration: none;
+
+		&:hover {
+			color: #777777;
+		}
+	}
+
+	&_buy {
+		.button;
+		padding: 10px 40px;
+		box-shadow: 0 0 0 1px #eeeeee;
+
+
+		&:hover {
+			background: linear-gradient(to left, @PINK 40%, @ORANGE 60%);
+			background-size: 400% 400%;
+			animation: 3s ease infinite gradientButton;
+			box-shadow: 0 0 0 3px #e1e1e1;
+		}
+
+		@media screen and @medium {
+			background: linear-gradient(to left, @PINK 40%, @ORANGE 60%);
+			background-size: 400% 400%;
+			animation: 3s ease infinite gradientButton;
+			box-shadow: 0 0 0 3px #e1e1e1;
+		}
+	}
+}

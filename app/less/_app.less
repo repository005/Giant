@@ -1,0 +1,139 @@
+.app {
+	position: relative;
+	display: flex;
+	z-index: 0;
+	width: 360px;
+	background: #fff;
+	min-height: 115px;
+	box-sizing: border-box;
+	text-align: left;
+	text-decoration: none;
+
+	@media screen and (max-width: 1150px) {
+		flex-wrap: wrap;
+		width: 30%;
+	}
+
+	&_left {
+		position: relative;
+		flex-basis: 115px;
+		background: #f7fafc;
+		height: auto;
+		margin-right: 20px;
+
+		@media screen and (max-width: 1150px) {
+			flex: 100% 1 0;
+			height: 115px;
+			margin-bottom: 20px;
+		}
+
+		@media screen and @medium {
+			margin-bottom: 0px;
+		}
+
+		&::before {
+			display: block;
+			position: absolute;
+			width: 115px;
+			height: 115px;
+			top: 15px;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			margin: auto;
+			content: '';
+		}
+
+		&__appstore {
+			&::before {
+				width: 69px; 
+				height: 77px;
+    		background: url('../img/download_sprite.png') -214px -107px;
+			}
+		}
+
+		&__playmarket {
+			&::before {
+				width: 73px; 
+				height: 76px;
+    background: url('../img/download_sprite.png') -103px -109px;
+			}
+		}
+
+		&__microsoft {
+			&::before {
+				width: 82px; 
+				height: 79px;
+   			background: url('../img/download_sprite.png') -112px -10px;
+			}
+		}
+	}
+	
+	&:hover {
+		box-shadow: 0 10px 30px 0 rgba(0,0,0, .1);
+		transform: scale(1.05);
+		transition: transform .3s ease;
+
+		@media screen and @medium {
+			transform: none;
+		}
+
+		.app_left {
+
+			&__appstore {
+			&::before {
+				width: 69px; 
+				height: 77px;
+   			background: url('../img/download_sprite.png') -214px -10px;
+			}
+		}
+
+		&__playmarket {
+			&::before {
+				width: 73px; 
+				height: 76px;
+    		background: url('../img/download_sprite.png') -10px -109px;
+			}
+		}
+
+		&__microsoft {
+			&::before {
+				width: 82px; 
+				height: 79px;
+   			background: url('../img/download_sprite.png') -10px -10px;
+			}
+		}
+		}
+	}
+
+	&_right {
+		padding-top: 25px;
+
+		@media screen and (max-width: 1150px) {
+			flex: 100%;
+			padding: 0;
+			text-align: center;
+		}
+
+		@media screen and @medium {
+			display: none;
+		}
+	}
+
+	&_headline {
+		font-family: @dosis;
+		font-size: 30px;
+		color: #222222;
+		margin-bottom: 8px;
+	}
+
+	&_text {
+		.text;
+
+		@media screen and (max-width: 1150px) {
+			margin-bottom: 20px;
+		}
+	}
+
+	
+}

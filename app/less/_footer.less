@@ -1,0 +1,46 @@
+.footer {
+	padding: 55px 0;
+	background: #222222;
+	text-align: center;
+	color: #fff;
+
+
+	@media screen and @medium {
+		padding: 35px 0;
+	}
+	
+	&_social-box {
+		margin-bottom: 25px;
+	}
+
+	&_social {
+		margin-right: 25px;
+		text-decoration: none;
+		color: #fff;
+
+		&:hover {
+			svg {
+				fill: @PINK;
+			}
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		svg {
+			height: 18px;
+			fill: white;
+		}
+	}
+
+	&_copyright {
+		.text;
+		color: white;
+
+		@media screen and @medium {
+			max-width: 80%;
+			margin: auto;
+		}
+	}
+}
